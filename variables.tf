@@ -41,7 +41,7 @@ variable "availibilty_zone_2" {
 variable "default_tags" {
   type = map(any)
   default = {
-    Application = "Demo App"
+    Application = "Image Classifier App"
     Environment = "Dev"
   }
 }

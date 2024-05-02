@@ -8,8 +8,9 @@ jobs:
     terraform:
         runs-on: ubuntu-latest
         env:
-            AWS_ACCESS_KEY_ID:  ${{ secrets.manohar_ACCESS_KEY }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.manohar_SECRET_KEY }}
+            AWS_ACCESS_KEY_ID:  ${{ secrets.Tejaswi_ACCESS_KEY }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.
+            Y }}
             AWS_DEFAULT_REGION: eu-west-1
         steps:
         - name: Checkout repository
