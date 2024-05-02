@@ -4,7 +4,7 @@
 
 #ECS cluster
 resource "aws_ecs_cluster" "ecs_cluster" {
-  name = "prasanna101-ecs-cluster"
+  name = "prasanna-ecs-cluster"
 }
 
 #The Task Definition used in conjunction with the ECS service
