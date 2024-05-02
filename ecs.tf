@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "task_definition" {
   container_definitions = jsonencode(
     [
       {
-        "name" : "tejaswi-container",
+        "name" : "Prasanna101-container",
         "image" : "${aws_ecr_repository.ecr.repository_url}:latest",
         "entryPoint" : []
         "essential" : true,
