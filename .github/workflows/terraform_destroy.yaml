@@ -1,5 +1,5 @@
 # Github Action to run terraform in this repo
-name: Terraform
+name: Terraform Destroy
 
 on:
   workflow_dispatch:
