@@ -46,7 +46,7 @@ resource "aws_ecs_task_definition" "task_definition" {
 
 #The ECS service described. This resources allows you to manage tasks
 resource "aws_ecs_service" "ecs_service" {
-  name                = "tejaswi-ecs-service"
+  name                = "prasanna-ecs-service"
   cluster             = aws_ecs_cluster.ecs_cluster.arn
   task_definition     = aws_ecs_task_definition.task_definition.arn
   launch_type         = "FARGATE"
@@ -62,7 +62,7 @@ resource "aws_ecs_service" "ecs_service" {
   # This block registers the tasks to a target group of the loadbalancer.
   load_balancer {
     target_group_arn = aws_lb_target_group.target_group.arn #the target group defined in the alb file
-    container_name   = "tejaswi-container"
+    container_name   = "prasanna-container"
     container_port   = var.container_port
   }
   depends_on = [aws_lb_listener.listener]
