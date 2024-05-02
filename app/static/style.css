@@ -5,44 +5,13 @@ body {
     padding: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* Adding a background image to an element */
+.background-element {
+    background-image: url('../images/Anirudh.jpg');
+    background-size: cover;  /* Cover the entire area of the container */
+    background-position: center;  /* Center the background image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+    height: 500px;  /* Set a specific height */
+    width: 100%;  /* Adjust the width as needed */
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Form styles */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-form label {
-    margin-bottom: 10px;
-}
-
-form input[type="date"] {
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-form input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-/* Calendar styles */
-#calendar {
-    margin: 0 auto;
-    max-width: 800px;
-}
