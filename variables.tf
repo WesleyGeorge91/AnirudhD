@@ -37,9 +37,9 @@ variable "availibilty_zone_2" {
   type        = string
   description = "First availibility zone"
 }
-  
+
 variable "default_tags" {
-  type = map
+  type = map(any)
   default = {
     Application = "Demo App"
     Environment = "Dev"
@@ -53,7 +53,7 @@ variable "container_port" {
 variable "shared_config_files" {
   description = "Path of your shared config file in .aws folder"
 }
-  
+
 variable "shared_credentials_files" {
   description = "Path of your shared credentials file in .aws folder"
 }
