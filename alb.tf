@@ -4,7 +4,7 @@
 
 #Defining the Application Load Balancer
 resource "aws_alb" "application_load_balancer" {
-  name               = "phaneendra-alb"
+  name               = "sunil-alb"
   internal           = false
   load_balancer_type = "application"
   subnets            = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id]
@@ -13,7 +13,7 @@ resource "aws_alb" "application_load_balancer" {
 
 #Defining the target group and a health check on the application
 resource "aws_lb_target_group" "target_group" {
-  name        = "phaneendra-tg"
+  name        = "sunil-tg"
   port        = var.container_port
   protocol    = "HTTP"
   target_type = "ip"

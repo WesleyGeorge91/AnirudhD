@@ -4,7 +4,7 @@
 
 #ECS cluster
 resource "aws_ecs_cluster" "ecs_cluster" {
-  name = "phaneendra-ecs-cluster"
+  name = "sunil-ecs-cluster"
 }
 
 #The Task Definition used in conjunction with the ECS service
@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "task_definition" {
   container_definitions = jsonencode(
     [
       {
-        "name" : "phaneendra-container",
+        "name" : "sunil-container",
         "image" : "${aws_ecr_repository.ecr.repository_url}:latest",
         "entryPoint" : []
         "essential" : true,
@@ -46,7 +46,7 @@ resource "aws_ecs_task_definition" "task_definition" {
 
 #The ECS service described. This resources allows you to manage tasks
 resource "aws_ecs_service" "ecs_service" {
-  name                = "phaneendra-ecs-service"
+  name                = "sunil-ecs-service"
   cluster             = aws_ecs_cluster.ecs_cluster.arn
   task_definition     = aws_ecs_task_definition.task_definition.arn
   launch_type         = "FARGATE"
@@ -62,7 +62,7 @@ resource "aws_ecs_service" "ecs_service" {
   # This block registers the tasks to a target group of the loadbalancer.
   load_balancer {
     target_group_arn = aws_lb_target_group.target_group.arn #the target group defined in the alb file
-    container_name   = "phaneendra-container"
+    container_name   = "sunil-container"
     container_port   = var.container_port
   }
   depends_on = [aws_lb_listener.listener]
