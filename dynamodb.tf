@@ -3,7 +3,7 @@
 #################################################################################################
 
 #Dynamodb Table
-resource "aws_dynamodb_table" "sunil" {
+resource "aws_dynamodb_table" "sunilchowdary" {
   name         = "leavedays"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "leave_id"
