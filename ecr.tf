@@ -4,7 +4,7 @@
 
 #Creation of the ECR repo
 resource "aws_ecr_repository" "ecr" {
-  name = "prasanna-repo"
+  name = "phaneendra-repo"
 }
 
 #The ECR policy describes the management of images in the repo
