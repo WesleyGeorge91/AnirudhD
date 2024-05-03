@@ -10,7 +10,7 @@ jobs:
         env:
             AWS_ACCESS_KEY_ID:  ${{ secrets.sunilchowdary_ACCESS_KEY }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.sunilchowdary_SECRET_KEY }}
-            AWS_DEFAULT_REGION: us-east-1
+            AWS_DEFAULT_REGION: us-east-2
         steps:
         - name: Checkout repository
           uses: actions/checkout@v2
